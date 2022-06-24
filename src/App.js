@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import StateColor from './components/StateColor'
+import StateCar from './components/StateCar'
+import StatePerson from './components/StatePerson'
+import StateClock from './components/StateClock'
+import Cor from './components/Cor'
+import Carro from './components/Carro'
+import Avaliacao from './components/Avaliacao';
+import Relogio from './components/Relogio'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StateColor color="azul"/>
+      <StateCar />
+      <StatePerson nome="Joao" profissao="Pintor" idade={33} />
+      <StateClock />
+      <Cor cor="cinza"/>
+      <Carro />
+      <Avaliacao tema="Introdução a algoritmos" questoes={30} tempoTotal={180} peso={50}/>
+      <Relogio />
     </div>
   );
 }
